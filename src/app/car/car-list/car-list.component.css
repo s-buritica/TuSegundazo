@@ -1,0 +1,57 @@
+.container-fluid {
+  margin-left: 20px;
+  margin-right: auto;
+  min-width: 320px;
+  max-width: 1440px;  
+}
+
+th {
+  font-weight: 700;
+  font-size: 18px;
+  height: 30px;
+  width: 175px;
+  color: white;
+  background-color: #333a40;
+  padding-left: 15px;
+}
+
+td {
+  height: 25px;
+  font-weight: 400;
+  text-align: flex-start;
+  padding-left: 15px;  
+}
+
+.id {
+  width: 75px;
+  font-weight: 700;
+}
+
+.modelo{
+  width: 350px;
+}
+
+.info-container {
+  display: table-header-group;
+  flex-flow: column;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start !important;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 40px;
+}
+
+table tr {
+  border-bottom: solid rgba(0, 0, 0, 0.2) 1px;  
+}
+
+table tr:last-child {
+  border-bottom: none;
+}
+
+.brands-counter {
+  display: flex;
+  justify-content: center !important;
+  flex-flow: column;
+}

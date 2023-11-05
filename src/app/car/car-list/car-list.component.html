@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <table class="info-container">
+    <thead>
+      <tr>
+        <th class="id" scope="col">#</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Línea</th>
+        <th class="modelo" scope="col">Modelo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of cars">
+        <td class="id">{{ car.id }}</td>
+        <td>{{ car.marca }}</td>
+        <td>{{ car.linea }}</td>
+        <td>{{ car.modelo }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="brands-counter">
+    <div *ngFor="let brand of brands">
+      <h6>Total {{ brand }}: {{ brandCounts[brand] }}</h6>
+    </div>
+  </div>
+</div>
+
