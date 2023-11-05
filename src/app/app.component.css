@@ -1,0 +1,20 @@
+* {
+  padding-left: 15px;  
+}
+
+.title {
+  margin-top: 15px;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2));
+  text-shadow: 0px 3px 5px black;
+  font-weight: bolder;
+}
+
+.hr-lines {
+  margin-left: 30px;
+  margin-right: 30px; 
+}
+
+.main-image-dive {
+  margin-right: 30px;
+  text-align: center;  
+}

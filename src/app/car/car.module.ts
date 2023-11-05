@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CarComponent } from './car.component';
 import { CarListComponent } from './car-list/car-list.component';
 
 @NgModule({
@@ -8,6 +7,6 @@ import { CarListComponent } from './car-list/car-list.component';
     CommonModule
   ],
   exports: [CarListComponent],
-  declarations: [CarComponent, CarListComponent]
+  declarations: [CarListComponent]
 })
 export class CarModule { }
