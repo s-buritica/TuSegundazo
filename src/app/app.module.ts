@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -13,6 +14,7 @@ import { CarModule } from './car/car.module';
     BrowserModule,
     AppRoutingModule,
     CarModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
