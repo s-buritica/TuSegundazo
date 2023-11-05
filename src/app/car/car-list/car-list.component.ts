@@ -10,12 +10,37 @@ import { CarService } from '../car.service';
 export class CarListComponent implements OnInit {
 
   cars: Array<Car> = [];
-
+  brands: string[] = [];
+  brandCounts: { [brand: string]: number } = {};
+  
   constructor(private carService: CarService) { }
 
-  getCars(): void {
-    this.carService.getCars()
-      .subscribe(cars => this.cars = cars);
+  calculateBrandCounts(cars: Car[]): void {
+    const count: { [marca: string]: number } = {};
+    cars.forEach((car) => {
+      if (count[car.marca]) {
+        count[car.marca]++;
+      } else {
+        count[car.marca] = 1;
+      }
+    });
+
+    const countArray = Object.entries(count);
+    countArray.sort((a, b) => b[1] - a[1]);
+    const sortedCount: { [marca: string]: number } = {};
+    countArray.forEach(([marca, conteo]) => {
+      this.brands.push(marca);
+      sortedCount[marca] = conteo;
+    });
+
+    this.brandCounts = sortedCount;
+  }
+
+    getCars(): void {
+    this.carService.getCars().subscribe((cars) => {
+      this.cars = cars;
+      this.calculateBrandCounts(cars);
+    });
   }
 
   ngOnInit() {

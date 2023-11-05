@@ -49,3 +49,9 @@ table tr {
 table tr:last-child {
   border-bottom: none;
 }
+
+.brands-counter {
+  display: flex;
+  justify-content: center !important;
+  flex-flow: column;
+}
